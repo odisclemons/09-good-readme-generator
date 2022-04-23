@@ -1,5 +1,5 @@
 {
-  "name": "static-site",
+  "name": "09-good-readme-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "inquirer": "^8.2.2"
+    "inquirer": "^8.2.2",
+    "node-fetch": "2"
   }
 }
