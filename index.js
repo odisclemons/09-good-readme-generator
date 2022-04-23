@@ -3,8 +3,11 @@ const inq = require('inquirer');
 const fs = require('fs');
 const fetch = require('node-fetch');
 const generateMarkdown = require('./utils/generateMarkdown')
+var answers = require('./utils/answers');
+const licenses = require('./utils/licenses');
+const choices = licenses.map(license => license.spdx_id)
 
-var name, language, license, license_url, description
+var name, language, license, license_url, description, username, repo
 
 // Save data from my sample gh request so we dont bother gh servers during development
 const data = require('./utils/data')
@@ -25,20 +28,22 @@ const initialQuestions = [{
     message: "Github Repo Name",
 },]
 
-var answers = require('./utils/answers');
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { }
 
 // TODO: Create a function to initialize app
 function init() {
+    inq.prompt(questions)
+        .then(answers => { console.log(answers); process.exit() })
     // inq.prompt(initialQuestions)
     //     .then(({ ghUser, ghRepo }) => fetch(`https://api.github.com/repos/${ghUser}/${ghRepo}`))
     //     .then(data => console.log(data))
 
-    fetch(`https://api.github.com/repos/odisclemons/09-good-readme-generator`)
-        .then(response => response.json())
-
+    // fetch(`https://api.github.com/repos/odisclemons/09-good-readme-generator`)
+    //     .then(response => response.json())
+    return
     console.log('Here\'s what we got from github about your repo:')
     console.log(`Repo name: ${data.name}`)
     console.log(`language: ${data.language}`)
@@ -59,6 +64,7 @@ function init() {
             console.log(`Description: ${description}`)
             console.log(`License: ${license}`)
             handleCheckAnswers(data, pkgJson)
+
         }
     })
 
@@ -71,9 +77,10 @@ function handleCheckAnswers(data) {
     // from gh repo fetch we get
     //name,  language, license, description
 
-    if (fileData.name)
+
 
 }
+
 
 // Function call to initialize app
 init();

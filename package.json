@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "inquirer": "^8.2.2",
+    "moment": "^2.29.3",
     "node-fetch": "2"
   }
 }
