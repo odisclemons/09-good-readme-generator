@@ -36,7 +36,13 @@ function writeToFile(fileName, data) { }
 // TODO: Create a function to initialize app
 function init() {
     inq.prompt(questions)
-        .then(answers => { console.log(answers); process.exit() })
+        .then(answers => {
+            let fileData = generateMarkdown(answers)
+            fs.writeFile('temp.md', fileData, 'utf-8', (err) => {
+                console.log(err ? err : "Successfully wrote file")
+            })
+
+        })
     // inq.prompt(initialQuestions)
     //     .then(({ ghUser, ghRepo }) => fetch(`https://api.github.com/repos/${ghUser}/${ghRepo}`))
     //     .then(data => console.log(data))

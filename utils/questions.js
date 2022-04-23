@@ -1,22 +1,22 @@
 const licenses = require("./licenses")
 
 const questions = [
-    // {
-    //     type: 'input',
-    //     name: 'name',
-    //     message: "Full Name",
-    // },
+    {
+        type: 'input',
+        name: 'name',
+        message: "Full Name (e.g.: John Doe)",
+    },
     // {
     //     type: 'input',
     //     name: 'email',
     //     message: "Email",
     // },
 
-    // {
-    //     type: 'input',
-    //     name: 'title',
-    //     message: "Project Title",
-    // },
+    {
+        type: 'input',
+        name: 'title',
+        message: "Project Title",
+    },
     // {
     //     type: 'editor',
     //     name: 'description',
