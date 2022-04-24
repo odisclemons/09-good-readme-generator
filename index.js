@@ -3,7 +3,7 @@ const inq = require('inquirer');
 const fs = require('fs');
 const fetch = require('node-fetch');
 const generateMarkdown = require('./utils/generateMarkdown')
-var prewrittenAnswers = require('./utils/answers');
+var prewrittenAnswers //= require('./utils/answers');
 
 // Save data from my sample gh request so we dont bother gh servers during development
 const data = require('./utils/data')
