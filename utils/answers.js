@@ -8,7 +8,7 @@ module.exports = {
     installation: '1) Do the thing\n' +
         '2) If the first step worked, do this now\n' +
         '3) Uh... more stuff I guess\n' +
-        '4) F it, youre done!\n',
+        '4) F-it, youre done!\n',
     usage: 'In your terminal type the following:\n' +
         '\n' +
         'node index.js\n' +
@@ -22,6 +22,6 @@ module.exports = {
         node_id: 'MDc6TGljZW5zZTEz'
     },
     contribute: "Email me at odis.clemons@gmail.com and we'll talk about it.\n",
-    tests: '',
+    tests: 'Tests are noticably absent as an indicator of how I feel about tests...',
     credits: 'Odis Clemons is the f-ing man!\n'
 }

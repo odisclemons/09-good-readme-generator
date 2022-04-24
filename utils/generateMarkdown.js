@@ -1,3 +1,4 @@
+// Get the current year for the license text
 const year = new Date().getFullYear()
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -20,8 +21,7 @@ function renderLicenseSection(data) {
   let { name, license, email } = data
   console.log(data)
   if (license) {
-    return `
-## License\n
+    return `## License\n
 Copyright (c) ${year} ${name} ${email ? email : ""} Licensed under the [${license.spdx_id}](${renderLicenseLink(license)}) license.
 `
   } else return ""
