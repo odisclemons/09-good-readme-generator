@@ -4,7 +4,7 @@ const year = new Date().getFullYear()
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  return license?.spdx_id ? `https://img.shields.io/badge/license-${license.spdx_id}-green` : ""
+  return license?.spdx_id ? `![github](https://img.shields.io/badge/license-${license.spdx_id}-green)` : ""
   // username && repo ? `https://img.shields.io/github/license/${username}/${repo}?label=license` : ""
 }
 
@@ -31,11 +31,11 @@ Copyright (c) ${year} ${name} ${email ? email : ""} Licensed under the [${licens
 // if a section is empty, dont render it
 const generateMarkdown = (data) => {
   // prettier-ignore
-  let { ghUser, ghRepo, title, description, installation, usage, license, contribute, tests, credits } = data
+  let { title, version, description, installation, usage, license, contribute, tests, credits } = data
   return `# ${title}
+  ${renderLicenseBadge(license)} ${version?.length > 0 ? `![version](https://img.shields.io/badge/version-${version}-orange)\n` : ``}
   ## Table of Contents
-  >${generateTOC(data)}
-  ${renderLicenseBadge(license)}
+  >${generateTOC(data)}  
   ${description?.length > 0 ? `## Description\n${description}\n\n` : ``}
   ${installation?.length > 0 ? `## Installation\n${installation}\n\n` : ``}
   ${usage?.length > 0 ? `## Usage\n${usage}\n\n` : ``}
@@ -56,7 +56,8 @@ function generateTOC(data) {
   ${contribute?.length > 0 ? `[Contribute](#contribute)\n` : ``}
   ${tests?.length > 0 ? `[Tests](#tests)\n` : ``}
   ${license?.spdx_id ? `[License](#license)\n` : ``}
-  ${credits?.length > 0 ? `[Credits](#credits)\n` : ``}`
+  ${credits?.length > 0 ? `[Credits](#credits)\n` : ``}
+  \n\n`
 }
 
 

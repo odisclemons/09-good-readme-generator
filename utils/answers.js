@@ -2,6 +2,7 @@ module.exports = {
     ghUser: 'odisclemons',
     ghRepo: '09-good-readme-generator',
     title: 'Good Readme Generator',
+    version: '1.0.0',
     name: 'Odis Clemons',
     email: 'odis.clemons@gmail.com',
     description: "Good Readme Generator will generate a README.md file based on the answers you give about your project when prompted. It's very simple to use; just follow the usage instructions below.\n",

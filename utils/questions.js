@@ -18,6 +18,11 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'version',
+        message: "Version (e.g.: 1.0.0)",
+    },
+    {
+        type: 'input',
         name: 'name',
         message: "Full Name (e.g.: John Doe)",
     },
