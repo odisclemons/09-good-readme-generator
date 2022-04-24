@@ -3,7 +3,7 @@ const inq = require('inquirer');
 const fs = require('fs');
 const fetch = require('node-fetch');
 const generateMarkdown = require('./utils/generateMarkdown')
-//var answers = require('./utils/answers');
+var prewrittenAnswers = require('./utils/answers');
 
 // Save data from my sample gh request so we dont bother gh servers during development
 const data = require('./utils/data')
@@ -20,10 +20,16 @@ function writeToFile(fileName, fileData) {
 
 // TODO: Create a function to initialize app
 function init() {
+
+    if (prewrittenAnswers) {
+        let fileData = generateMarkdown(prewrittenAnswers)
+        writeToFile('temp.md', fileData)
+        return
+    }
     inq.prompt(questions)
         .then(answers => {
             let fileData = generateMarkdown(answers)
-            writeToFile('temp.md', fileData)
+            writeToFile('README.md', fileData)
         })
     // inq.prompt(initialQuestions)
     //     .then(({ ghUser, ghRepo }) => fetch(`https://api.github.com/repos/${ghUser}/${ghRepo}`))

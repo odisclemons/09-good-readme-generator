@@ -28,19 +28,35 @@ Copyright (c) ${year} ${name} ${email ? email : ""} Licensed under the [${licens
 }
 
 // TODO: Create a function to generate markdown for README
+// if a section is empty, dont render it
 const generateMarkdown = (data) => {
   // prettier-ignore
-  let { ghUser, ghRepo, title, name, email, description, installation, usage, license, contribute, tests, credits } = data
-  return `${license?.spdx_id ? `![GitHub](https://img.shields.io/github/license/${ghUser}/${ghRepo}?label=license)` : ""}
-  # ${title}
-  ${description?.length > 0 ? `## Description<br/>${description}<br/>` : ``}
-  ${installation?.length > 0 ? `## Installation<br/>${installation}<br/>` : ``}
-  ${usage?.length > 0 ? `## Usage<br/>${usage}<br/>` : ``}
-  ${credits?.length > 0 ? `## Credits<br/>${credits}<br/>` : ``}
-  ${tests?.length > 0 ? `## Tests<br/>${tests}<br/>` : ``}
+  let { ghUser, ghRepo, title, description, installation, usage, license, contribute, tests, credits } = data
+  return `# ${title}
+  ## Table of Contents
+  >${generateTOC(data)}
+  ${renderLicenseBadge(license)}
+  ${description?.length > 0 ? `## Description\n${description}\n\n` : ``}
+  ${installation?.length > 0 ? `## Installation\n${installation}\n\n` : ``}
+  ${usage?.length > 0 ? `## Usage\n${usage}\n\n` : ``}
+  ${contribute?.length > 0 ? `## Contribute\n${contribute}\n\n` : ``}
+  ${tests?.length > 0 ? `## Tests\n${tests}\n\n` : ``}
   ${renderLicenseSection(data)}
-  ${credits?.length > 0 ? `## Credits<br/>${credits}<br/>` : ``}
+  ${credits?.length > 0 ? `## Credits\n${credits}\n\n` : ``}
   `;
+}
+
+// generate the table of contents.  if a section is empty, dont render it
+function generateTOC(data) {
+  let { description, installation, usage, license, contribute, tests, credits } = data
+  return `
+  ${description?.length > 0 ? `[Description](#description)\n` : ``}
+  ${installation?.length > 0 ? `[Installation Instructions](#installation)\n` : ``}
+  ${usage?.length > 0 ? `[Usage Info](#usage)\n` : ``}
+  ${contribute?.length > 0 ? `[Contribute](#contribute)\n` : ``}
+  ${tests?.length > 0 ? `[Tests](#tests)\n` : ``}
+  ${license?.spdx_id ? `[License](#license)\n` : ``}
+  ${credits?.length > 0 ? `[Credits](#credits)\n` : ``}`
 }
 
 
