@@ -16,6 +16,7 @@
 
   [Credits](#credits)
 
+  [Questions](#questions)
   
 
   
@@ -37,6 +38,7 @@ To use Good Readme Generator, simply run node index.js from the project folder a
 
 Here is a video of these steps in action:
 
+![screen-recording](./assets/screencast.gif)
 
 
   ## Contribute
@@ -54,4 +56,6 @@ This project was created by [Odis Clemons](https://odisclemons.com).
 
 
 
+  ## Questions
+For any questions you may have, please contact Odis Clemons at [odis.clemons@gmail.com](mailto://odis.clemons@gmail.com), or on Github at [https://github.com/odisclemons](https://github.com/odisclemons)
   

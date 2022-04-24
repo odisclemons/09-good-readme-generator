@@ -67,6 +67,11 @@ const questions = [
         name: 'credits',
         message: "Credits",
     },
+    {
+        type: 'editor',
+        name: 'userQuestions',
+        message: "How should users contact you with questions?",
+    },
 
 
 ]

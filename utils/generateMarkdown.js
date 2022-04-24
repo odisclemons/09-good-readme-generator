@@ -31,7 +31,7 @@ Copyright (c) ${year} ${name} ${email ? email : ""} Licensed under the [${licens
 // if a section is empty, dont render it
 const generateMarkdown = (data) => {
   // prettier-ignore
-  let { title, version, description, installation, usage, license, contribute, tests, credits } = data
+  let { name, email, ghUser, ghRepo, title, version, description, installation, usage, license, contribute, tests, credits, userQuestions } = data
   return `# ${title}
   ${renderLicenseBadge(license)} ${version?.length > 0 ? `![version](https://img.shields.io/badge/version-${version}-orange)\n` : ``}
   ## Table of Contents
@@ -58,6 +58,7 @@ function generateTOC(data) {
   ${tests?.length > 0 ? `[Tests](#tests)\n` : ``}
   ${license?.spdx_id ? `[License](#license)\n` : ``}
   ${credits?.length > 0 ? `[Credits](#credits)\n` : ``}
+  [Questions](#questions)
   \n\n`
 }
 
