@@ -11,8 +11,7 @@
 
   [Contribute](#contribute)
 
-  [Tests](#tests)
-
+  
   [License](#license)
 
   [Credits](#credits)
@@ -21,42 +20,37 @@
 
   
   ## Description
-Good Readme Generator will generate a README.md file based on the answers you give about your project when prompted. It's very simple to use; just follow the usage instructions below.
+Good Readme Generator will generate a README.md for your projects.  When you run this script, you will receive a series of prompts about your project.  When finished, you will have a brand new professional readme complete with badges and all the information people will need to know about your project.   It's very simple to use; just follow the usage instructions below.
 
 
 
   ## Installation
-1) Do the thing
-2) If the first step worked, do this now
-3) Uh... more stuff I guess
-4) F-it, youre done!
+Installation is simple.  Open your terminal and:
+1) git clone https://github.com/odisclemons/09-good-readme-generator
+2) cd 09-good-readme-generator
+3) yarn or npm install
 
 
 
   ## Usage
-In your terminal type the following:
+To use Good Readme Generator, simply run node index.js from the project folder and answer the prompts.
 
-node index.js
-
-You will receive a series of prompts.  Simply answer them until you're done.
+Here is a video of these steps in action:
 
 
 
   ## Contribute
-Email me at odis.clemons@gmail.com and we'll talk about it.
+My code is open source.  You can fork the repository and then submit a pull request.
 
 
 
-  ## Tests
-Tests are noticably absent as an indicator of how I feel about tests...
-
-
+  
   ## License
 
 Copyright (c) 2022 Odis Clemons odis.clemons@gmail.com Licensed under the [MIT](https://api.github.com/licenses/mit) license.
 
   ## Credits
-Odis Clemons is the f-ing man!
+This project was created by [Odis Clemons](https://odisclemons.com).
 
 
 

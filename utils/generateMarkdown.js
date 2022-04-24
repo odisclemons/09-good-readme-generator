@@ -43,6 +43,7 @@ const generateMarkdown = (data) => {
   ${tests?.length > 0 ? `## Tests\n${tests}\n\n` : ``}
   ${renderLicenseSection(data)}
   ${credits?.length > 0 ? `## Credits\n${credits}\n\n` : ``}
+  ## Questions\n${userQuestions?.length > 0 ? `${userQuestions}\n\n` : `For any questions you may have, please contact ${name} at [${email}](mailto://${email}), or on Github at [https://github.com/${ghUser}](https://github.com/${ghUser})`}
   `;
 }
 
