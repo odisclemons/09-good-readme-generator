@@ -1,18 +1,13 @@
 module.exports = {
     ghUser: 'odisclemons',
-    ghRepo: '09-good-readme-generator',
-    title: 'Good Readme Generator',
+    ghRepo: '11-note-taker',
+    title: 'Note Taker',
     version: '1.0.0',
     name: 'Odis Clemons',
     email: 'odis.clemons@gmail.com',
-    description: "Good Readme Generator will generate a README.md for your projects.  When you run this script, you will receive a series of prompts about your project.  When finished, you will have a brand new professional readme complete with badges and all the information people will need to know about your project.   It's very simple to use; just follow the usage instructions below.\n",
-    installation: 'Installation is simple.  Open your terminal and:\n' +
-        '1) git clone https://github.com/odisclemons/09-good-readme-generator\n' +
-        '2) cd 09-good-readme-generator\n' +
-        '3) yarn or npm install\n',
-    usage: 'To use Good Readme Generator, simply run node index.js from the project folder and answer the prompts.\n' +
-        '\n' +
-        'Here is a video of these steps in action:\n',
+    description: 'Note Taker is a simple note taking application.  You can add or delete notes.\n',
+    installation: 'git clone https://github.com/odisclemons/11-note-taker\ncd 11-note-taker\n',
+    usage: 'Note Taker is very simple to use.  Just click the + icon at the upper right-hand corner.  This will allow you to create a new note.  After that, fill in the note title and description.  Finally you can click the save icon.  Note: you cannot save a note until both fields are filled in.\n',
     license: {
         key: 'mit',
         name: 'MIT License',
@@ -20,7 +15,8 @@ module.exports = {
         url: 'https://api.github.com/licenses/mit',
         node_id: 'MDc6TGljZW5zZTEz'
     },
-    contribute: 'My code is open source.  You can fork the repository and then submit a pull request.\n',
-    tests: '',
-    credits: 'This project was created by [Odis Clemons](https://odisclemons.com).\n'
+    contribute: 'Send me a pull request on this project and you can contribute if your code is approved.\n',
+    tests: 'There are no tests available for this app.\n',
+    credits: 'This app was creatd by Odis Clemons.\n',
+    userQuestions: ''
 }
